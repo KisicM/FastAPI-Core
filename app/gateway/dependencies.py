@@ -10,24 +10,13 @@ from app.core.config import Settings, get_settings
 from app.db.schema.user import User
 from app.model.token import TokenPayload
 from app.repository.user_repository import UserRepository
+from app.service.user_service import UserService
 from app.util import security
 from app.db.session import SessionLocal
 
 reusable_oauth2 = OAuth2PasswordBearer(
     tokenUrl=f"api/v1/login/access-token"
 )
-
-
-def get_db() -> Generator:
-    try:
-        db = SessionLocal()
-        yield db
-    finally:
-        db.close()
-
-
-def get_user_repository(db: Session = Depends(get_db)) -> UserRepository:
-    return UserRepository(User, db)
 
 
 def validate_token(token: str = Depends(reusable_oauth2), settings: Settings = Depends(get_settings)) -> int:

@@ -1,7 +1,5 @@
 from typing import Any, Dict, Optional, Type, Union
-
 from sqlalchemy.orm import Session
-
 from app.util.security import get_password_hash, verify_password
 from .generic_repository import CRUDBase
 from app.db.schema.user import User
