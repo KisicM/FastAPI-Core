@@ -1,8 +1,6 @@
 # FastAPI-Core
 Welcome to the FastAPI Core Project Template! This project serves as a template for building FastAPI applications with a core structure that you can use as a starting point for your own projects.
 
-```markdown
-
 ## Table of Contents
 
 - [Features](#features)
@@ -38,14 +36,14 @@ Before you begin, ensure you have met the following requirements:
    cd FastAPI-Core
    ```
 
-3. Create a virtual environment (recommended):
+2. Create a virtual environment (recommended):
 
    ```sh
    pip install -m venv venv
    source venv/bin/activate
    ```
 
-4. Install the project dependencies:
+3. Install the project dependencies:
 
    ```sh
    pip install -r requirements.txt
