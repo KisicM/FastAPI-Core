@@ -39,7 +39,7 @@ Before you begin, ensure you have met the following requirements:
 2. Create a virtual environment (recommended):
 
    ```sh
-   pip install -m venv venv
+   python -m venv venv
    source venv/bin/activate
    ```
 
